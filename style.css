@@ -7,6 +7,14 @@
     user-select:none
 }
 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
 input[type=checkbox]{
     display: none;
 }
@@ -119,4 +127,33 @@ input[id=modal]:checked~.modalBox{
     background-color: black;
     display: flex;
     float: left;
+}
+
+.name{
+    display: flex;
+    width: 120px;
+    height: 30px;
+    padding: 3px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.name > p {
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Notice > ul > li {
+    width: 350px;
+    height: 40px;
+    padding: 8px 5px;
+}
+
+.Notice > ul > li > span{
+    float: right;
 }
