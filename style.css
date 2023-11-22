@@ -130,10 +130,12 @@ input[id=modal]:checked~.modalBox{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     float: left;
+    background-color: aliceblue;
+    border: #000000 2px solid;
 }
 
 .slides::-webkit-scrollbar {
-    height: 10px;
+    height: 15px;
 }
 
 .slides::-webkit-scrollbar-thumb {
@@ -148,7 +150,7 @@ input[id=modal]:checked~.modalBox{
     width: 100%;
     height: 100%;
     background: #EEFDF7;
-    border: #000000 2px solid;
+    border-bottom: #000000 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +270,7 @@ input[id=modal]:checked~.modalBox{
 .iconBox{
     float: left;
     width: 40%;
-    height: 388px;
+    height: 400px;
     /* background: linear-gradient(to top, aquamarine, bisque); */
     background-color: aliceblue;
     border-top: 2px solid black;
@@ -286,17 +288,49 @@ input[id=modal]:checked~.modalBox{
 }
 
 .iconBtn > button:nth-child(1){
-    background: linear-gradient(to top, aliceblue, #A9FFFF);
+    background: linear-gradient(to top, aliceblue, #7cffff);
 }
 
 .iconBtn > button:nth-child(2){
-    background: linear-gradient(to top, aliceblue, #A1FFDC);
+    background: linear-gradient(to top, aliceblue, #7cffcf);
 }
 
 .iconBtn > button:nth-child(3){
-    background: linear-gradient(to top, aliceblue, #BACAEC);
+    background: linear-gradient(to top, aliceblue, #91b4ff);
 }
 
 .iconBtn > button:nth-child(4){
-    background: linear-gradient(to top, aliceblue, #868D93);
+    background: linear-gradient(to top, aliceblue, #888b8e);
 }
+
+.ytbBox{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+    border-left: #000000 2px solid;
+    border-bottom: #000000 2px solid;
+    border-right: #000000 2px solid;
+}
+
+.Youtube{
+    display: flex;
+    align-items: center;
+}
+
+.Youtube > iframe{
+    border: #000000 3px solid;
+    border-radius: 15px;
+}
+
+.ytb1{
+    width: 50%;
+    display: flex;
+    margin-left: 10%;
+}
+
+.ytb2{
+    width: 50%;
+    display: flex;
+}
+
