@@ -83,15 +83,15 @@ header{
 
 .modalBox{
     position: fixed;
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
     background-color: aliceblue;
     border: 2px solid black;
     border-radius: 15px;
     left: 0%;
     right: 0%;
     margin: auto;
-    top: 25%;
+    top: 15%;
     display: none;
 }
 
@@ -113,11 +113,96 @@ input[id=modal]:checked~.modalBox{
     display: block;
 }
 
+.snsBox{
+    margin-top: 8%;
+}
+
+.snsBox img{
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+  
+.slides::-webkit-scrollbar {
+    height: 10px;
+}
+  
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    border: #eee 2px solid;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px;
+    background: #EEFDF7;
+    border: #000000 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+
+.slides > div > li{
+    color: black;
+}
+
+.carousel-open{
+    overflow: hidden;
+}
+
+.carousel-control {
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    color: #fff;
+    border: #fff 2px solid;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 22%;
+}
+
+.carousel-control.prev {
+    left: 5px;
+}
+.carousel-control.next {
+    right: 5px;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: red;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4 {
+    display: block;
+}
+
 .conBox{
     width: 33%;
     height: 200px;
     background-color: aliceblue;
-    display: flex;
     float: left;
 }
 
@@ -125,35 +210,52 @@ input[id=modal]:checked~.modalBox{
     width: 0.5%;
     height: 200px;
     background-color: black;
-    display: flex;
     float: left;
 }
 
 .name{
     display: flex;
-    width: 120px;
-    height: 30px;
-    padding: 3px;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 40px;
+    line-height: 32px;
+}
+
+.name > p {
+    display: flex;
     background-color: black;
     border-radius: 10px;
     margin-top: 2px;
     margin-left: 2px;
-}
-
-.name > p {
+    padding: 3px;
     color: aliceblue;
     font-size: 18px;
     font-weight: 700;
 }
 
 .Notice > ul > li {
-    width: 350px;
+    width: 100%;
     height: 40px;
     padding: 8px 5px;
+    border: black 1px solid;
+    font-weight: 600;
 }
+
+.Notice > ul > li > a{
+    width: 100%;
+    float: left;
+    color: black
+}
+
 
 .Notice > ul > li > span{
     float: right;
+    margin-top: -20px;
+}
+
+.Notice > ul > li:nth-child(odd){
+    background-color: aquamarine;
+}
+
+.Notice > ul > li:nth-child(even){
+    background-color: bisque;
 }
